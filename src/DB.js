@@ -156,7 +156,7 @@ class Database {
         authConfig: {
           type: Sequelize.JSON
         }
-      }, { indexes: [{ fields: ['kid'], unique: true }] }),
+      }, { indexes: [] }),
       publickey: this.#sequelize.define('publickey', {
         kid: {
           type: Sequelize.STRING,
@@ -174,7 +174,7 @@ class Database {
         data: {
           type: Sequelize.TEXT
         }
-      }, { indexes: [{ fields: ['kid'], unique: true }] }),
+      }, { indexes: [] }),
       privatekey: this.#sequelize.define('privatekey', {
         kid: {
           type: Sequelize.STRING,
@@ -192,7 +192,7 @@ class Database {
         data: {
           type: Sequelize.TEXT
         }
-      }, { indexes: [{ fields: ['kid'], unique: true }] }),
+      }, { indexes: [] }),
       accesstoken: this.#sequelize.define('accesstoken', {
         platformUrl: {
           type: Sequelize.TEXT
@@ -209,7 +209,7 @@ class Database {
         data: {
           type: Sequelize.TEXT
         }
-      }, { indexes: [{ fields: ['platformUrl', 'clientId', 'scopes'], unique: true }, { fields: ['createdAt'] }] }),
+      }, { indexes: [{ fields: ['createdAt'] }] }),
       nonce: this.#sequelize.define('nonce', {
         nonce: {
           type: Sequelize.STRING,

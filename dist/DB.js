@@ -250,10 +250,7 @@ class Database {
           type: Sequelize.JSON
         }
       }, {
-        indexes: [{
-          fields: ['kid'],
-          unique: true
-        }]
+        indexes: []
       }),
       publickey: (0, _classPrivateFieldGet2.default)(this, _sequelize).define('publickey', {
         kid: {
@@ -273,10 +270,7 @@ class Database {
           type: Sequelize.TEXT
         }
       }, {
-        indexes: [{
-          fields: ['kid'],
-          unique: true
-        }]
+        indexes: []
       }),
       privatekey: (0, _classPrivateFieldGet2.default)(this, _sequelize).define('privatekey', {
         kid: {
@@ -296,10 +290,7 @@ class Database {
           type: Sequelize.TEXT
         }
       }, {
-        indexes: [{
-          fields: ['kid'],
-          unique: true
-        }]
+        indexes: []
       }),
       accesstoken: (0, _classPrivateFieldGet2.default)(this, _sequelize).define('accesstoken', {
         platformUrl: {
@@ -319,9 +310,6 @@ class Database {
         }
       }, {
         indexes: [{
-          fields: ['platformUrl', 'clientId', 'scopes'],
-          unique: true
-        }, {
           fields: ['createdAt']
         }]
       }),
